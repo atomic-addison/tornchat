@@ -1,0 +1,227 @@
+body {
+	overflow: hidden !important;
+	height: 100vh !important;
+}
+
+#recover-account-link {
+	display: none;
+}
+
+#frmLogin {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(0deg, rgb(22, 22, 22) 0%, rgb(50, 50, 50) 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#frmLogin>div:first-child {
+	display: inline-flex;
+	width: 172px;
+	height: 77px;
+	margin-bottom: 10px;
+	background-image: url(/images/v2/torn_logo/regular/desktop/logo@2x.webp);
+	background-size: cover;
+	background-position: top left;
+}
+
+@media screen and (max-width: 1000px) {
+	#frmLogin>div:first-child {
+		margin-bottom: 10px !important;
+	}
+
+	.r #frmLogin .login-wrap .svg-wrap {
+		display: none !important;
+	}
+
+	.d .logged-out .log-in .login-wrap {
+	    background: url(/images/v2/header/regular/976_reg_out_login.png) !important;
+	    padding: 3px 1px !important;
+	    background-position: -4px -2px !important;
+	    background-repeat: no-repeat !important;
+	    width: 52px !important;
+	    height: 24px !important;
+	}
+
+	.d .logged-out .log-in .login-wrap:hover {
+	    background-position: -4px -34px !important;
+	}
+
+	.r .logged-out .log-in input.login {
+	    height: 28px !important;
+	    background: 0 0 !important;
+	    color: #999 !important;
+	    color: var(--default-gray-9-color) !important;
+	    cursor: pointe !important;
+	    font-weight: 700 !important;
+	    text-shadow: 1px 1px 2px rgb(0 0 0 / 65%) !important;
+	    width: 60px !important;
+	    font-size: 12px !important;
+	}
+
+	.d .logged-out .log-in.hide-checkbox .input-wrapper--container {
+	    padding: 0 21px 0 10px !important;
+	    margin: 10px 5px 0 !important;
+	}
+}
+
+#chatRoot {
+	position: fixed;
+	z-index: 999999;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(0deg, rgb(22, 22, 22) 0%, rgb(50, 50, 50) 100%);
+}
+
+#chatRoot>div {
+	position: fixed;
+	top: 0;
+	left: 5px;
+	bottom: 0 !important;
+	height: 100vh !important;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#chatRoot div[class*="chat-active_"] {
+	position: fixed !important;
+	right: 5px !important;
+	top: 0 !important;
+	bottom: 5px !important;
+	left: 143px !important;
+	display: flex !important;
+	flex-direction: column;
+}
+
+#chatRoot div[class*="chat-active_"] div[class*="chat-box-content_"] {
+	flex-grow: 1;
+	width: 100% !important;
+	box-sizing: border-box;
+}
+
+#chatRoot [class*="chat-box-people_"] span[class*="name_"]:before {
+	content: "People";
+}
+
+#chatRoot [class*="chat-box-notebook_"] span[class*="name_"]:before {
+	content: "Notebook";
+}
+
+#chatRoot [class*="chat-box-settings_"][class*="chat-box-notebook_"] div[class*="chat-box-head_"] {
+	width: 100%;
+}
+
+#chatRoot [class*="chat-box-settings_"][class*="chat-box-notebook_"],
+#chatRoot [class*="chat-box-settings_"][class*="minimized_"],
+#chatRoot [class*="chat-box-settings_"][class*="minimized_"] div[class*="chat-box-head_"]{
+	width: 132px !important;
+	max-width: 132px !important;
+}
+
+#chatRoot div[class*="chat-active_"][class*="chat-box-people_"] span[class*="name_"]:before {
+	content: "";
+}
+
+#chatRoot div[class*="chat-active_"][class*="chat-box-settings_"][class*="chat-box-notebook_"],
+#chatRoot div[class*="chat-active_"][class*="chat-box-settings_"][class*="minimized_"] {
+	width: unset !important;
+	max-width: unset !important;
+}
+
+#chatRoot div[class*="chat-active_"][class*="chat-box-settings_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="chat-active_"] div[class*="chat-box-head_"] {
+	width: 100% !important;
+	max-width: unset !important;
+}
+
+#chatRoot div[class*="chat-active_"] div[class*="chat-box-content_"] div[class*="viewport_"]{
+	height: 100% !important;
+	max-height: unset !important;
+}
+
+#chatRoot div[class*="chat-active_"] div[class*="chat-box-input_"] {
+	margin-bottom: 0 !important;
+	box-sizing: border-box;
+}
+
+#chatRoot div[class*="chat-active_"] div[class*="chat-box-input_"] > div {
+	padding: 3px;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+#chatRoot div[class*="chat-active_"] div[class*="chat-box-input_"] textarea {
+	width: 100% !important;
+	margin: 0px !important;
+	height: 100% !important;
+	box-sizing: border-box;
+}
+
+#chatRoot div[class*="minimized_"][class*="chat-box_"] {
+	width: 132px !important;
+	max-width: 132px !important;
+}
+
+#chatRoot div[class*="fixed11_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="fixed10_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="fixed9_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="fixed8_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="fixed7_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="fixed6_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="fixed5_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="fixed4_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="minimized_"][class*="chat-box_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="minimized_"] div[class*="chat-box-head_"],
+#chatRoot div[class*="minimized_"][class*="chat-box_"] {
+	border-radius: 5px !important;
+	width: 132px !important;
+	max-width: 132px !important;
+}
+
+#chatRoot div[class*="fixed11_"][class*="chat-box_"] span[class*="name_"],
+#chatRoot div[class*="fixed10_"][class*="chat-box_"] span[class*="name_"],
+#chatRoot div[class*="fixed9_"][class*="chat-box_"] span[class*="name_"],
+#chatRoot div[class*="fixed8_"][class*="chat-box_"] span[class*="name_"],
+#chatRoot div[class*="fixed7_"][class*="chat-box_"] span[class*="name_"],
+#chatRoot div[class*="fixed6_"][class*="chat-box_"] span[class*="name_"],
+#chatRoot div[class*="fixed5_"][class*="chat-box_"] span[class*="name_"],
+#chatRoot div[class*="fixed4_"][class*="chat-box_"] span[class*="name_"] {
+	width: unset !important;
+	max-width: unset !important;
+}
+
+#chatRoot div[class*="minimized_"][class*="chat-box_"] div[class*="chat-box-title_"]:after {
+	display: inline-block;
+}
+
+#chatRoot div[class*="minimized_"][class*="chat-box_"][class*="hospital_"] div[class*="chat-box-title_"]:after {
+	content: "Hospital";
+}
+
+#chatRoot div[class*="minimized_"][class*="chat-box_"][class*="trade_"] div[class*="chat-box-title_"]:after {
+	content: "Trade";
+}
+
+#chatRoot div[class*="minimized_"][class*="chat-box_"][class*="faction_"] div[class*="chat-box-title_"]:after {
+	content: "Faction";
+}
+
+#chatRoot div[class*="minimized_"][class*="chat-box_"][class*="company_"] div[class*="chat-box-title_"]:after {
+	content: "Company";
+}
+
+#chatRoot div[class*="minimized_"][class*="chat-box_"][class*="new-players_"] div[class*="chat-box-title_"]:after {
+	content: "New Players";
+}
+
+
+
+

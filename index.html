@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Torn chat</title>
+  </head>
+  <body>
+    <webview id="main" class="webview" src="https://www.torn.com/login.php" preload="./preload.js"></webview>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>
